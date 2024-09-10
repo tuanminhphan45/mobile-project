@@ -1,4 +1,4 @@
-package vn.edu.usth.mobile_project;
+package vn.edu.usth.mobile_project.Fragment;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import vn.edu.usth.mobile_project.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MailOption#newInstance} factory method to
+ * Use the {@link FloderFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MailOption extends Fragment {
+public class FloderFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class MailOption extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public MailOption() {
+    public FloderFragment() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class MailOption extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MailOption.
+     * @return A new instance of fragment FloderFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static MailOption newInstance(String param1, String param2) {
-        MailOption fragment = new MailOption();
+    public static FloderFragment newInstance(String param1, String param2) {
+        FloderFragment fragment = new FloderFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class MailOption extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mail_option, container, false);
+        return inflater.inflate(R.layout.fragment_floder, container, false);
     }
 }
