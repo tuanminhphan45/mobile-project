@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEAEB"
+    tools:context=".MailwithimageFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/profileSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+
+        android:background="#f5f5f5"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp">
+
+        <!-- Profile Picture -->
+        <ImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profilepic" />
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profilePicture"
+            android:layout_marginStart="8dp"
+            android:text="@string/Luke"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Time Ago -->
+        <TextView
+            android:id="@+id/timeAgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profilePicture"
+            android:layout_below="@id/userName"
+            android:layout_marginStart="8dp"
+            android:text="1h ago"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <!-- User Email -->
+
+        <!-- Trash Icon -->
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="13dp"
+            android:text="@string/lukemail"
+            android:textColor="#A9A9A9"
+            android:textSize="14sp" />
+
+
+
+        <!-- Menu Icon -->
+
+    </RelativeLayout>
+
+    <!-- Mail Content Title -->
+    <TextView
+        android:id="@+id/mailContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileSection"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/nature_photo"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!-- Mail Body -->
+
+    <!-- Action Buttons -->
+
+    <TextView
+        android:id="@+id/mailBody"
+        android:layout_width="wrap_content"
+        android:layout_height="425dp"
+        android:layout_above="@+id/actionButtons"
+        android:layout_below="@id/mailContent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="95dp"
+        android:text="@string/nature"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/actionButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:background="#f5f5f5"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/forwardButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:text="Forward"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/replyButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#CC0000"
+            android:text="Reply"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/actionButtons"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/mirror_lake">
+
+    </ImageView>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/actionButtons"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="18dp"
+        android:src="@drawable/flower_field">
+
+    </ImageView>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/actionButtons"
+        android:layout_marginLeft="180dp"
+        android:layout_marginBottom="18dp"
+        android:src="@drawable/sunrise">
+
+    </ImageView>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/actionButtons"
+        android:layout_marginLeft="260dp"
+        android:layout_marginBottom="18dp"
+        android:src="@drawable/mountain">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="330dp"
+        android:layout_above="@id/actionButtons"
+        android:layout_marginBottom="18dp"
+        android:textSize="30sp"
+        android:text="+4">
+
+    </TextView>
+
+</RelativeLayout>
