@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Write">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <!--To-->
+    <RelativeLayout
+        android:id="@+id/to"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+
+
+        android:layout_marginTop="129dp"
+        android:clipToOutline="true">
+
+        <View
+            android:id="@+id/separation_"
+            android:layout_width="366dp"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="53dp"
+            android:background="#1A000000" />
+
+        <EditText
+            android:id="@+id/inputto"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="19dp"
+            android:gravity="top"
+            android:text="To:"
+
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/To"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="19dp"
+            android:gravity="top"
+            android:text="To:"/>
+
+
+    </RelativeLayout>
+    <!--From-->
+    <RelativeLayout
+        android:id="@+id/from"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="183dp"
+        android:clipToOutline="true">
+
+        <View
+            android:id="@+id/separation2"
+            android:layout_width="366dp"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="53dp"
+            android:background="#1A000000" />
+
+        <TextView
+            android:id="@+id/From"
+            android:layout_width="38dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="19dp"
+            android:text="From:"
+            android:textSize="14sp"
+            android:gravity="top"
+            />
+
+        <ImageView
+            android:id="@+id/downarrow"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="350dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="19dp"
+            android:src="@drawable/down_arrow"
+            android:gravity="top"
+            />
+
+    </RelativeLayout>
+    <!--Subject-->
+    <RelativeLayout
+        android:id="@+id/subject"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="261dp"
+        android:clipToOutline="true" >
+
+        <TextView
+            android:id="@+id/Subject"
+            android:layout_width="55dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="19dp"
+            android:text="Subject:"
+            android:textSize="14sp"
+            android:gravity="top"
+            />
+
+        <View
+            android:id="@+id/separation3"
+            android:layout_width="366dp"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="53dp"
+            android:background="#1A000000"
+            />
+    </RelativeLayout>
+    <!--Compose Email-->
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/compose_ema"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="315dp"
+        android:clipToOutline="true"
+        >
+
+        <TextView
+            android:id="@+id/Compose_ema"
+            android:layout_width="102dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="19dp"
+            android:text="Compose email"
+            android:textSize="14sp"
+            android:textColor="#808080"
+            android:gravity="top"
+            />
+    </RelativeLayout>
+
+    <!--Footer-->
+    <RelativeLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="620dp"
+        android:background="@color/white"
+        android:elevation="32dp"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_alignParentLeft="true"
+                >
+
+                <Button
+                    android:layout_width="159dp"
+                    android:gravity="left"
+                    android:layout_height="43dp"
+                    android:backgroundTint="#FFDDDD"
+
+                />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginLeft="17dp"
+                    android:src="@drawable/paper_clip"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:id="@+id/add_files"
+                    android:layout_width="68dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Add Files"
+                    android:textSize="16sp"
+                    android:textColor="#611717"
+                    android:layout_centerInParent="true"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true">
+                <Button
+                    android:layout_width="159dp"
+                    android:layout_height="43dp"
+                    android:gravity="right"
+
+                    android:backgroundTint="#E13535" />
+
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginLeft="17dp"
+                    android:src="@drawable/send"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:id="@+id/send"
+                    android:layout_width="68dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Send"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@color/white"
+    android:elevation="32dp"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="62dp"
+        android:layout_height="29dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="165dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="49dp"
+        android:text="Write"
+        android:textSize="24sp"
+        android:textColor="#611717"
+        android:gravity="center_horizontal|top"
+        />
+
+    <ImageButton
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="31dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="49dp"
+        android:src="@drawable/back_arrow"
+        android:backgroundTint="@color/white"
+        />
+
+
+</RelativeLayout>
+</FrameLayout>
