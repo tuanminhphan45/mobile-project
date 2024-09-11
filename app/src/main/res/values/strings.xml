@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">Gmail</string>
-    <string name="open">Mở</string>
     <string name="navigation_drawer_open">Open navigation bar</string>
     <string name="navigation_drawer_close">Close navigation bar</string>
     <string name="login">Log in</string>
@@ -9,8 +7,6 @@
     <string name="register">Register</string>
     <string name="click_to_login">Click to log in</string>
     <string name="click_to_register">Click to register</string>
-    <string name="logout">Logout</string>
-    <string name="usth_mail">USTH Mail</string>
     <string name="search_in_mail">Search in mail</string>
     <string name="log_in">Log In</string>
     <string name="welcome_back">Welcome Back</string>
@@ -24,12 +20,6 @@
     <string name="search_in_chat_and_spaces">Search in chat and spaces</string>
     <string name="compose">Compose</string>
     <string name="new_chat">New chat</string>
-    <string name="new_space">New space</string>
-    <string name="new_meeting">New meeting</string>
-    <string name="join_a_meeting">Join a Meeting</string>
-    <string name="spaces_are_where_team_magic_happens_find_or_create_spaces_using_the_new_space_button">Spaces are where team magic happens. Find or create spaces using the new space button.</string>
-    <string name="spaces">SPACES</string>
-    <string name="meetings">MEETINGS</string>
     <string name="please_register_with_your_information">Please register with your information</string>
     <string name="to">To</string>
     <string name="subject">Subject</string>
@@ -55,7 +45,6 @@
     <string name="me">me</string>
     <string name="sign_in_to_your_account">Sign in to your account</string>
     <string name="email_address">Email Address</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="rachel_jacobs">Rachel Jacobs</string>
     <string name="_47_emails">47 emails</string>
@@ -65,6 +54,13 @@
     <string name="_14_emails">14 emails</string>
     <string name="trash">Trash</string>
     <string name="default123">Default</string>
-
+    <string name="user_name">Jenny Boyer</string>
+    <string name="main_name">Helena</string>
+    <string name="time_sent">40m ago</string>
+    <string name="content">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit duis tristique. Enim lobortis scelerisque fermentum dui faucibus in ornare. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Risus feugiat in ante metus dictum. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Adipiscing tristique risus nec feugiat in. Nibh praesent tristique magna sit amet purus gravida. Egestas diam in arcu cursus euismod quis viverra nibh cras. Tincidunt nunc pulvinar sapien et ligula ullamcorper. Rhoncus mattis rhoncus urna neque viverra justo nec. Quisque non tellus orci ac. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Sed tempus urna et pharetra.
+</string>
+    <string name="profile_desc">handsome</string>
+    <string name="app_name">Gmail\n</string>
 
 </resources>

@@ -22,6 +22,7 @@
             android:fontFamily="sans-serif-medium"
             android:paddingBottom="16dp"/>
         <LinearLayout
+            android:id="@+id/starred"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -54,6 +55,7 @@
                 android:textColor="#666666"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/read_later"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -86,6 +88,7 @@
                 android:textColor="#666666"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/sent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -119,6 +122,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/spam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -153,6 +157,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/trash"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -198,6 +203,7 @@
 
 
         <LinearLayout
+            android:id="@+id/like"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -213,7 +219,7 @@
                 android:src="@drawable/like_icon" />
 
             <TextView
-                android:id="@+id/funny_label"
+                android:id="@+id/like_label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -223,7 +229,7 @@
                 android:paddingStart="16dp"/>
 
             <TextView
-                android:id="@+id/funny_count"
+                android:id="@+id/like_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="26 emails"
@@ -232,6 +238,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/days_of_ui"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -265,6 +272,7 @@
                 android:textColor="#666666"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/love"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -280,7 +288,7 @@
                 android:src="@drawable/heart_icon" />
 
             <TextView
-                android:id="@+id/jim_label"
+                android:id="@+id/love_label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -290,7 +298,7 @@
                 android:paddingStart="16dp"/>
 
             <TextView
-                android:id="@+id/jim_count"
+                android:id="@+id/love_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="11 emails"
