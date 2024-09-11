@@ -1,20 +1,5 @@
 <resources>
-<<<<<<< HEAD
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="app_name">Mail</string>
-    <string name="Luke">Luke</string>
-    <string name="lukemail">luke86@gmail.com</string>
-    <string name="selfintro">Self introduction</string>
-    <string name="paragraph">Hello everyone,
-
-I’m Luke. I\'ve just joined this department as a college student. I have 2 years of experience in mobile application and web application. I\'ve had the pleasure of meeting some of you already and look forward to getting to know everyone here better. To start, maybe everyone could mention the position they’re in and the clients they’re focused on?</string>
-    <string name="nature">The photograph captures a breathtaking scene of nature’s splendor. A tranquil lake mirrors the vibrant hues of a setting sun, casting a warm, golden glow over the landscape. Majestic mountains rise in the distance, their peaks dusted with a delicate layer of snow. Surrounding the lake, lush greenery and wildflowers add bursts of color, creating a harmonious blend of natural beauty. The sky, painted with soft shades of pink and orange, completes the serene tableau, inviting the viewer to pause and appreciate the peaceful grandeur of the moment.</string>
-    <string name="nature_photo">Beautiful photos we took</string>
-    <string name="my_favorite_song">My favorite song</string>
-    <string name="fav_song">One of my favorite songs is "something just like this" by Coldplay and Chainsmokers. This song has a powerful and comforting melody that resonates deeply with me. The gentle start, with its soft guitar and piano notes, gradually builds into an emotional crescendo that feels both uplifting and cathartic. The lyrics, filled with themes of hope, healing, and perseverance, offer a sense of solace during tough times. Whenever I listen to it, I\'m reminded of the importance of being there for others and finding light in moments of darkness. It's a song that never fails to move me, no matter how many times I hear it.</string>
-=======
     <string name="app_name">mobile-project</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
->>>>>>> 7b34029649891b5bbeb60115efea33a0f73b7642
 </resources>
