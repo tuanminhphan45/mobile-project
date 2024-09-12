@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red_settings">#FFE13535</color>
+    <color name="red_toolbar_bg">#33E13535</color>
+    <color name="red_text">#FF611717</color>
+    <color name="switch_settings_label">#99000000</color>
+    <color name="green">#FF2CD747</color>
 </resources>
