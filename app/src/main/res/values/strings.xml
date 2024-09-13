@@ -62,5 +62,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </string>
     <string name="profile_desc">handsome</string>
     <string name="app_name">Gmail\n</string>
-
+    <string name="email_subject">
+What is your opinion about this boss?
+</string>
+    <string name="email_content">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit duis tristique. Enim lobortis scelerisque fermentum dui faucibus in ornare. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Risus feugiat in ante metus dictum. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Adipiscing tristique risus nec feugiat in. Nibh praesent tristique magna sit amet purus gravida. Egestas diam in arcu cursus euismod quis viverra nibh cras. Tincidunt nunc pulvinar sapien et ligula ullamcorper. Rhoncus mattis rhoncus urna neque viverra justo nec. Quisque non tellus orci ac. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Sed tempus urna et pharetra.
+</string>
+    <string name="email_name">Kristopher Cremin</string>
+    <string name="forwardText">Forward</string>
+    <string name="replyText">Reply</string>
 </resources>
