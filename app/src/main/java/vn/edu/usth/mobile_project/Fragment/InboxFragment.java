@@ -1,5 +1,6 @@
 package vn.edu.usth.mobile_project.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import vn.edu.usth.mobile_project.Activity.LoginActivity;
+import vn.edu.usth.mobile_project.Activity.MainActivity;
 import vn.edu.usth.mobile_project.R;
 
 /**
@@ -62,5 +66,6 @@ public class InboxFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_inbox, container, false);
+
     }
 }

@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         ImageButton btnSetting = findViewById(R.id.btnSetting);
 
 //        btnSetting.setOnClickListener(v -> {

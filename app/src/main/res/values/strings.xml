@@ -71,4 +71,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     <string name="email_name">Kristopher Cremin</string>
     <string name="forwardText">Forward</string>
     <string name="replyText">Reply</string>
+    <string name="backbtn">backBtn</string>
+    <string name="btnforword">btnForword</string>
+    <string name="profileimage">profileImage</string>
+    <string name="_1h_ago">1h ago</string>
+    <string name="kris13_gmail_com">kris13@gmail.com</string>
+    <string name="menubtm">menuBtm</string>
+    <string name="trashbtn">Trashbtn</string>
 </resources>
