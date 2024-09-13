@@ -3,66 +3,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Inbox"
+    tools:context=".InboxMulti_selecting"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="144dp"
         android:orientation="vertical">
-    <!-- Top bar layout -->
+        <!-- Top bar layout -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="10dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_weight="1"
-            android:padding="10dp">
+            android:padding="20dp">
 
             <!-- User icon, name, search icon, setting icon -->
             <ImageView
-                android:id="@+id/userIcon"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/user"
-                android:layout_weight="1"/>
+                android:id="@+id/x"
+                android:layout_width="24dp"
+                android:layout_height="33dp"
+                android:src="@drawable/close"
+                android:layout_gravity="center"/>
 
-            <TextView
-                android:id="@+id/username"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Nguyen Thanh Long"
-                android:layout_weight="0.5"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"/>
 
             <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp">
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:id="@+id/circle1.1"
                     android:src="@drawable/circle1"
                     android:layout_gravity="center"/>
                 <ImageView
                     android:id="@+id/searchIcon"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp"
                     android:src="@drawable/search"
-                    android:layout_weight="1"
                     android:layout_gravity="center"/>
             </FrameLayout>
 
             <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp">
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:id="@+id/circle1.2"
                     android:src="@drawable/circle1"
                     android:layout_gravity="center"/>
@@ -71,11 +62,10 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/settings"
-                    android:layout_weight="1"
                     android:layout_gravity="center"/>
             </FrameLayout>
         </LinearLayout>
-    <!-- Inbox layout -->
+        <!-- Inbox layout -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="5dp"
@@ -130,12 +120,23 @@
                     android:layout_weight="0"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <FrameLayout
                         android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_weight="0"
-                        android:src="@drawable/user" />
-
+                        android:layout_height="40dp">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/user" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/circle2" />
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/check"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
