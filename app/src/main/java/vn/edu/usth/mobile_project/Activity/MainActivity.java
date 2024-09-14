@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
                 if (tab.getIcon() != null) {
-                    tab.getIcon().setTint(getResources().getColor(R.color.black)); // Set your default color here
+                    tab.getIcon().setTint(getResources().getColor(R.color.btn_bg)); // Set your default color here
                 }
             }
 
