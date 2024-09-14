@@ -1,6 +1,7 @@
 package vn.edu.usth.mobile_project.Fragment;
 
 import android.content.Intent;
+import android.graphics.ImageDecoder;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,9 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import vn.edu.usth.mobile_project.Activity.LoginActivity;
 import vn.edu.usth.mobile_project.Activity.MainActivity;
+import vn.edu.usth.mobile_project.Activity.SearchActivity;
+import vn.edu.usth.mobile_project.Activity.WriteActivity;
 import vn.edu.usth.mobile_project.R;
 
 /**
@@ -29,6 +35,7 @@ public class InboxFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private MainActivity mainActivity;
 
     public InboxFragment() {
         // Required empty public constructor
@@ -65,7 +72,18 @@ public class InboxFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inbox, container, false);
-
+        View view   = inflater.inflate(R.layout.fragment_inbox, container, false);
+        FloatingActionButton floatingActionButton = view.findViewById(R.id.write_email);
+        mainActivity= (MainActivity)getActivity();
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), WriteActivity.class);
+                startActivity(intent);
+            }
+        });
+        return view;
     }
+
+
 }
