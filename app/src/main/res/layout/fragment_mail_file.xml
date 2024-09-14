@@ -214,7 +214,8 @@
                 android:text="@string/replyText"
                 android:layout_marginStart="8dp"
                 android:backgroundTint="#D9534F"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
