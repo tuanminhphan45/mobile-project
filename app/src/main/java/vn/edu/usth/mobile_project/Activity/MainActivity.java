@@ -46,11 +46,17 @@ public class MainActivity extends AppCompatActivity {
                 viewPager2.setVisibility(View.VISIBLE);
                 frameLayout.setVisibility(View.GONE);
                 viewPager2.setCurrentItem(tab.getPosition());
+
+                if (tab.getIcon() != null) {
+                    tab.getIcon().setTint(getResources().getColor(R.color.red));
+                }
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
+                if (tab.getIcon() != null) {
+                    tab.getIcon().setTint(getResources().getColor(R.color.black)); // Set your default color here
+                }
             }
 
             @Override
@@ -65,7 +71,11 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 switch (position){
                     case 0:
+                        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.red));
+                        break;
                     case 1:
+                        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.red));
+                        break;
                     case 2:
                         tabLayout.getTabAt(position).select();
                 }
