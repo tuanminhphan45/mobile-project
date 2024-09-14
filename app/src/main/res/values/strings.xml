@@ -78,4 +78,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     <string name="kris13_gmail_com">kris13@gmail.com</string>
     <string name="menubtm">menuBtm</string>
     <string name="trashbtn">Trashbtn</string>
+    <string name="search">Search</string>
+    <string name="searching">Searching</string>
 </resources>

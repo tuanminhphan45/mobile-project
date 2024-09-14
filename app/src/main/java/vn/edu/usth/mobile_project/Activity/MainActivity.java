@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -55,11 +57,17 @@ public class MainActivity extends AppCompatActivity {
                 viewPager2.setVisibility(View.VISIBLE);
                 frameLayout.setVisibility(View.GONE);
                 viewPager2.setCurrentItem(tab.getPosition());
+
+                if (tab.getIcon() != null) {
+                    tab.getIcon().setTint(getResources().getColor(R.color.red));
+                }
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
+                if (tab.getIcon() != null) {
+                    tab.getIcon().setTint(getResources().getColor(R.color.btn_bg)); // Set your default color here
+                }
             }
 
             @Override
@@ -73,7 +81,11 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 switch (position){
                     case 0:
+                        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.red));
+                        break;
                     case 1:
+                        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.red));
+                        break;
                     case 2:
                         tabLayout.getTabAt(position).select();
                 }
@@ -90,6 +102,18 @@ public class MainActivity extends AppCompatActivity {
 //            startActivity(intent);
 //            finish();
 //        });
+
+
+        ImageButton button = findViewById(R.id.btnSearch);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,SearchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 

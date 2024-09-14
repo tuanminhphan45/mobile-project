@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFF6F4"
     tools:context=".Fragment.FloderFragment">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:background="#FFF6F4">
 
         <TextView
             android:layout_marginTop="30dp"
@@ -17,9 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/default123"
-            android:textSize="24sp"
-            android:textColor="#000000"
-            android:fontFamily="sans-serif-medium"
+            style="@style/title_folder"
             android:paddingBottom="16dp"/>
         <LinearLayout
             android:id="@+id/starred"
@@ -42,17 +37,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/starred"
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:paddingStart="16dp"/>
+                style="@style/content_folder"/>
 
             <TextView
                 android:id="@+id/starred_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_47_emails"
-                android:textSize="14sp"
-                android:textColor="#666666"/>
+                style="@style/sub_folder"/>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/read_later"
@@ -75,17 +67,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/read_later"
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:paddingStart="16dp"/>
+                style="@style/content_folder"/>
 
             <TextView
                 android:id="@+id/read_later_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_16_emails"
-                android:textSize="14sp"
-                android:textColor="#666666"/>
+                style="@style/sub_folder"/>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/sent"
@@ -108,17 +97,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/sent"
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:paddingStart="16dp"/>
+                style="@style/content_folder"/>
 
             <TextView
                 android:id="@+id/sent_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_245_emails"
-                android:textSize="14sp"
-                android:textColor="#666666"/>
+                style="@style/sub_folder"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -143,17 +130,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Spam"
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:paddingStart="16dp"/>
+                style="@style/content_folder"/>
 
             <TextView
                 android:id="@+id/spam_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="24 emails"
-                android:textSize="14sp"
-                android:textColor="#666666"/>
+                style="@style/sub_folder"/>
         </LinearLayout>
 
         <LinearLayout
@@ -177,17 +161,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/trash"
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:paddingStart="16dp"/>
+                style="@style/content_folder"/>
 
             <TextView
                 android:id="@+id/trash_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_14_emails"
-                android:textSize="14sp"
-                android:textColor="#666666"/>
+                style="@style/sub_folder"/>
         </LinearLayout>
 
         <TextView
@@ -195,9 +176,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Created"
-            android:textSize="24sp"
-            android:textColor="#000000"
-            android:fontFamily="sans-serif-medium"
+            style="@style/title_folder"
             android:paddingTop="24dp"
             android:paddingBottom="16dp"/>
 
@@ -224,17 +203,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Funny"
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:paddingStart="16dp"/>
+                style="@style/content_folder"/>
 
             <TextView
                 android:id="@+id/like_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="26 emails"
-                android:textSize="14sp"
-                android:textColor="#666666"/>
+                style="@style/sub_folder"/>
         </LinearLayout>
 
         <LinearLayout
@@ -259,17 +235,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="100 days of UI"
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:paddingStart="16dp"/>
+                style="@style/content_folder"/>
 
             <TextView
                 android:id="@+id/days_of_ui_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="31 emails"
-                android:textSize="14sp"
-                android:textColor="#666666"/>
+                style="@style/sub_folder"/>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/love"
@@ -293,20 +266,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Jim"
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:paddingStart="16dp"/>
+                style="@style/content_folder"/>
 
             <TextView
                 android:id="@+id/love_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="11 emails"
-                android:textSize="14sp"
-                android:textColor="#666666"/>
+                style="@style/sub_folder"/>
         </LinearLayout>
 
-    </LinearLayout>
-
-
-</FrameLayout>
+</LinearLayout>

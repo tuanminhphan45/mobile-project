@@ -1,6 +1,7 @@
 package vn.edu.usth.mobile_project.Fragment;
 
 import android.content.Intent;
+import android.graphics.ImageDecoder;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,12 +15,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
 import vn.edu.usth.mobile_project.Activity.LoginActivity;
 import vn.edu.usth.mobile_project.Activity.MainActivity;
+import vn.edu.usth.mobile_project.Activity.SearchActivity;
+import vn.edu.usth.mobile_project.Activity.WriteActivity;
 import vn.edu.usth.mobile_project.Adapter.MailAdapter;
 import vn.edu.usth.mobile_project.Model.EmailItem;
 import vn.edu.usth.mobile_project.R;
@@ -43,6 +49,7 @@ public class InboxFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private MainActivity mainActivity;
 
     public InboxFragment() {
         // Required empty public constructor
@@ -89,6 +96,16 @@ public class InboxFragment extends Fragment {
         mailAdapter = new MailAdapter(getContext(), emails);
         recyclerView.setAdapter(mailAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        FloatingActionButton floatingActionButton = view.findViewById(R.id.write_email);
+        mainActivity= (MainActivity)getActivity();
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), WriteActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
 
     }
@@ -109,5 +126,7 @@ public class InboxFragment extends Fragment {
         FragmentActivity activity = getActivity();
 
         activity.getSupportFragmentManager().beginTransaction().replace(R.id.mainContainer, mail).addToBackStack(null).commit();
+
+
     }
 }
