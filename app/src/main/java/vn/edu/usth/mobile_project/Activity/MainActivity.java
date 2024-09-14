@@ -2,6 +2,7 @@ package vn.edu.usth.mobile_project.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -12,14 +13,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.ArrayList;
+
+import vn.edu.usth.mobile_project.Adapter.MailAdapter;
 import vn.edu.usth.mobile_project.Adapter.ViewPagerAdapter;
 import vn.edu.usth.mobile_project.Fragment.FloderFragment;
 import vn.edu.usth.mobile_project.Fragment.InboxFragment;
 import vn.edu.usth.mobile_project.Fragment.StatterdFragment;
+import vn.edu.usth.mobile_project.Model.EmailItem;
 import vn.edu.usth.mobile_project.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     ViewPager2 viewPager2;
     ViewPagerAdapter viewPagerAdapter;
     FrameLayout frameLayout;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager2.setAdapter(viewPagerAdapter);
         frameLayout = findViewById(R.id.frameLayout);
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -56,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
                 viewPager2.setVisibility(View.VISIBLE);
                 frameLayout.setVisibility(View.GONE);
-
             }
         });
         viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
@@ -73,12 +82,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
         ImageButton btnSetting = findViewById(R.id.btnSetting);
 
 //        btnSetting.setOnClickListener(v -> {
-////            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+//            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
 //            startActivity(intent);
 //            finish();
 //        });
     }
+
+
 }

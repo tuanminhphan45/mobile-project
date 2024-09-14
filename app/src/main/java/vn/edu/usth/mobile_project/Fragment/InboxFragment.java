@@ -3,15 +3,25 @@ package vn.edu.usth.mobile_project.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
 
 import vn.edu.usth.mobile_project.Activity.LoginActivity;
 import vn.edu.usth.mobile_project.Activity.MainActivity;
+import vn.edu.usth.mobile_project.Adapter.MailAdapter;
+import vn.edu.usth.mobile_project.Model.EmailItem;
 import vn.edu.usth.mobile_project.R;
 
 /**
@@ -20,6 +30,10 @@ import vn.edu.usth.mobile_project.R;
  * create an instance of this fragment.
  */
 public class InboxFragment extends Fragment {
+    RecyclerView recyclerView;
+    MailAdapter mailAdapter;
+
+    ArrayList<EmailItem> emails;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -65,7 +79,35 @@ public class InboxFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inbox, container, false);
+        View view = inflater.inflate(R.layout.fragment_inbox, container, false);
+        // LinearLayout emailList = view.findViewById(R.id.emailItemList);
 
+        emails = new ArrayList<>();
+        createEmailList();
+        Log.d("myTag", emails.toString());
+        recyclerView = view.findViewById(R.id.recyclerMails);
+        mailAdapter = new MailAdapter(getContext(), emails);
+        recyclerView.setAdapter(mailAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        return view;
+
+    }
+
+    private void createEmailList(){
+        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
+        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
+        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
+        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
+        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
+        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
+        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
+        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
+    }
+
+    private void openMail(View v){
+        MailFragment mail = new MailFragment();
+        FragmentActivity activity = getActivity();
+
+        activity.getSupportFragmentManager().beginTransaction().replace(R.id.mainContainer, mail).addToBackStack(null).commit();
     }
 }
