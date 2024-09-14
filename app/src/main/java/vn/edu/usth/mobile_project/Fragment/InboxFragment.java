@@ -111,14 +111,9 @@ public class InboxFragment extends Fragment {
     }
 
     private void createEmailList(){
-        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
-        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
-        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
-        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
-        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
-        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
-        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
-        emails.add(new EmailItem("Jenny Boyer", "Helena", 40, "Lorem ipsum"));
+        for(int i = 0; i < 20; i++){
+            emails.add(new EmailItem("Jenny Boyer", "Helena", 40, getString(R.string.email_content)));
+        }
     }
 
     private void openMail(View v){

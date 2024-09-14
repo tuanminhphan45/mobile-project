@@ -96,12 +96,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         ImageButton btnSetting = findViewById(R.id.btnSetting);
-
-//        btnSetting.setOnClickListener(v -> {
-//            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-//            startActivity(intent);
-//            finish();
-//        });
+        btnSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         ImageButton button = findViewById(R.id.btnSearch);

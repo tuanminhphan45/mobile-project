@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentInsetStart="0dp"
+    app:contentInsetEnd="0dp">
+
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ToolbarFragment"
+        android:paddingStart="@dimen/padding_toolbar_horizontal"
+        android:paddingEnd="@dimen/padding_toolbar_horizontal">
+
+        <ImageButton
+            android:id="@+id/returnBtn"
+            android:layout_width="@dimen/icon_back_width"
+            android:layout_height="@dimen/icon_back_height"
+            android:src="@drawable/arrow_left"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/button_back"
+            android:clickable="true"
+            android:focusable="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textSize="24sp"
+            android:textColor="@color/red_text"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sf_pro_text_medium"/>
+
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

@@ -12,7 +12,7 @@ import vn.edu.usth.mobile_project.R;
 public class VH extends RecyclerView.ViewHolder {
     private ImageView profileImg;
     private TextView username;
-    private TextView mainName;
+    private TextView subject;
     private TextView timeSent;
     private TextView content;
     public VH(@NonNull View itemView) {
@@ -20,7 +20,7 @@ public class VH extends RecyclerView.ViewHolder {
 
         this.profileImg = itemView.findViewById(R.id.profile_image);
         this.username = itemView.findViewById(R.id.user_name);
-        this.mainName = itemView.findViewById(R.id.main_name);
+        this.subject = itemView.findViewById(R.id.subject);
         this.timeSent = itemView.findViewById(R.id.time_sent);
         this.content = itemView.findViewById(R.id.content);
     }
@@ -33,8 +33,8 @@ public class VH extends RecyclerView.ViewHolder {
         this.username.setText(username);
     }
 
-    public void setMainName(String mainName) {
-        this.mainName.setText(mainName);
+    public void setSubject(String subject) {
+        this.subject.setText(subject);
     }
 
     public void setTimeSent(int timeSent) {

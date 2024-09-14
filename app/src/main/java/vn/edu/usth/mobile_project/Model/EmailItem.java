@@ -2,20 +2,20 @@ package vn.edu.usth.mobile_project.Model;
 
 public class EmailItem {
     // private String imgUrl;
-    private String mainName;
+    private String subject;
     private String username;
     private int timeSent;
     private String content;
 
-    public EmailItem(String username, String mainName, int timeSent, String content){
-        this.mainName = mainName;
+    public EmailItem(String username, String subject, int timeSent, String content){
+        this.subject = subject;
         this.username = username;
         this.timeSent = timeSent;
         this.content = content;
     }
 
-    public String getMainName(){
-        return this.mainName;
+    public String getSubject(){
+        return this.subject;
     }
 
     public int getTimeSent(){
@@ -30,8 +30,8 @@ public class EmailItem {
         return username;
     }
 
-    public void setMainName(String mainName) {
-        this.mainName = mainName;
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
     public void setUsername(String username) {
