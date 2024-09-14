@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Search"
+            android:text="@string/search"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/btn_bg"
@@ -54,12 +54,11 @@
         android:id="@+id/search_tbl"
         >
 
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Searching"
-            android:padding="10sp"
+            android:hint="@string/searching"
+            android:padding="15dp"
             android:layout_margin="20dp"
             android:background="@drawable/edit_text_coner"
             android:textSize="16sp"
@@ -79,7 +78,6 @@
             app:tint="@color/btn_bg"
             android:padding="4dp"
             android:layout_margin="10dp"
-
             />
 
     </RelativeLayout>
