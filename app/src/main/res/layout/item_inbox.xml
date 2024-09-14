@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:paddingVertical="8dp"
     android:paddingHorizontal="16dp"
@@ -15,13 +16,15 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/profile_image"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/circle"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@drawable/profile_picture"
-            android:layout_gravity="center_vertical"
-            android:contentDescription="@string/profile_desc"/>
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circle"
+            app:srcCompat="@drawable/profile_picture" />
 
 
         <LinearLayout
