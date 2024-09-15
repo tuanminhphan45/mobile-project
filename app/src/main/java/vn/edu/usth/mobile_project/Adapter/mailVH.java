@@ -19,6 +19,8 @@ public class mailVH extends RecyclerView.ViewHolder {
     private TextView timeSent;
     private TextView content;
     private RelativeLayout overlay;
+    private ImageView star;
+
     public mailVH(@NonNull View itemView) {
         super(itemView);
 
@@ -28,6 +30,7 @@ public class mailVH extends RecyclerView.ViewHolder {
         this.timeSent = itemView.findViewById(R.id.time_sent);
         this.content = itemView.findViewById(R.id.content);
         this.overlay = itemView.findViewById(R.id.profileOverlay);
+        this.star = itemView.findViewById(R.id.star_active);
     }
 
     public ImageView getProfileImg() {
@@ -54,6 +57,10 @@ public class mailVH extends RecyclerView.ViewHolder {
         return content;
     }
 
+    public ImageView getStar() {
+        return star;
+    }
+
     public void setProfileImg(int imgId) {
         this.profileImg.setImageResource(imgId);
     }
@@ -72,6 +79,15 @@ public class mailVH extends RecyclerView.ViewHolder {
 
     public void setContent(String content) {
         this.content.setText(content);
+    }
+
+    public void setStar(boolean visible) {
+        if (visible){
+            this.star.setVisibility(View.VISIBLE);
+        }
+        else{
+            this.star.setVisibility(View.GONE);
+        }
     }
 
     public void toggleOverlay(){

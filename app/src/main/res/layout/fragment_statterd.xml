@@ -6,44 +6,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.StatterdFragment"
     android:background="#FFF6F4">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingHorizontal="10dp"
-        android:paddingTop="20dp">
 
-        <include
-            layout="@layout/item_love"
-            android:id="@+id/itemLove1" />
-        <include
-            layout="@layout/item_love"
-            android:id="@+id/itemLove2" />
-        <include
-            layout="@layout/item_love"
-            android:id="@+id/itemLove3" />
-        <include
-            layout="@layout/item_love"
-            android:id="@+id/itemLove4" />
-        <include
-            layout="@layout/item_love"
-            android:id="@+id/itemLove5" />
-        <include
-            layout="@layout/item_love"
-            android:id="@+id/itemLove6" />
-        <include
-            layout="@layout/item_love"
-            android:id="@+id/itemLove7" />
-        <include
-            layout="@layout/item_love"
-            android:id="@+id/itemLove8" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
-    </LinearLayout>
-    </ScrollView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/write_email"
         android:layout_width="wrap_content"

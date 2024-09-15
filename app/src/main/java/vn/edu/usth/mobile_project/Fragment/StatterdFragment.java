@@ -1,13 +1,26 @@
 package vn.edu.usth.mobile_project.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+
+import vn.edu.usth.mobile_project.Activity.MainActivity;
+import vn.edu.usth.mobile_project.Activity.WriteActivity;
+import vn.edu.usth.mobile_project.Adapter.MailAdapter;
+import vn.edu.usth.mobile_project.Model.EmailItem;
 import vn.edu.usth.mobile_project.R;
 
 /**
@@ -16,6 +29,10 @@ import vn.edu.usth.mobile_project.R;
  * create an instance of this fragment.
  */
 public class StatterdFragment extends Fragment {
+    RecyclerView recyclerView;
+    MailAdapter mailAdapter;
+
+    ArrayList<EmailItem> emails;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,6 +42,7 @@ public class StatterdFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private MainActivity mainActivity;
 
     public StatterdFragment() {
         // Required empty public constructor
@@ -61,6 +79,45 @@ public class StatterdFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_statterd, container, false);
+        View view = inflater.inflate(R.layout.fragment_statterd, container, false);
+        // create the list of email items
+        emails = new ArrayList<>();
+        createEmailList();
+        Log.d("myTag", emails.toString());
+        recyclerView = view.findViewById(R.id.recyclerMails);
+        mailAdapter = new MailAdapter(getContext(), emails);
+        recyclerView.setAdapter(mailAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        // setup floating button
+        FloatingActionButton floatingActionButton = view.findViewById(R.id.write_email);
+        mainActivity= (MainActivity)getActivity();
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), WriteActivity.class);
+                startActivity(intent);
+            }
+        });
+        return view;
+    }
+
+    private void createEmailList(){
+        for(int i = 0; i < 20; i++){
+            EmailItem mail = new EmailItem("Jenny Boyer", "Helena", 40, getString(R.string.email_content));
+            mail.setStarred(true);
+            emails.add(mail);
+        }
+    }
+
+    private void openMail(){
+        // Replace the whole screen with the new fragment
+        Fragment emailDetailFragment = new MailFragment();
+
+        // Perform the fragment transaction
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.mainContainer, emailDetailFragment);
+        transaction.addToBackStack(null); // Add to back stack to allow "back" navigation
+        transaction.commit();
     }
 }

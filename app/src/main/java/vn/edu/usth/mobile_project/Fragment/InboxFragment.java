@@ -88,7 +88,6 @@ public class InboxFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_inbox, container, false);
-        // LinearLayout emailList = view.findViewById(R.id.emailItemList);
 
         // create the list of email items
         emails = new ArrayList<>();
@@ -99,14 +98,13 @@ public class InboxFragment extends Fragment {
         recyclerView.setAdapter(mailAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-
-
+        // setup floating button
         FloatingActionButton floatingActionButton = view.findViewById(R.id.write_email);
         mainActivity= (MainActivity)getActivity();
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), WriteActivity.class);
+                Intent intent = new Intent(mainActivity, WriteActivity.class);
                 startActivity(intent);
             }
         });

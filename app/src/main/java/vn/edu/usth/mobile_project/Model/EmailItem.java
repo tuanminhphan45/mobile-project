@@ -6,12 +6,14 @@ public class EmailItem {
     private String username;
     private int timeSent;
     private String content;
+    private boolean starred;
 
     public EmailItem(String username, String subject, int timeSent, String content){
         this.subject = subject;
         this.username = username;
         this.timeSent = timeSent;
         this.content = content;
+        this.starred = false;
     }
 
     public String getSubject(){
@@ -30,6 +32,10 @@ public class EmailItem {
         return username;
     }
 
+    public boolean isStarred() {
+        return starred;
+    }
+
     public void setSubject(String subject) {
         this.subject = subject;
     }
@@ -44,5 +50,9 @@ public class EmailItem {
 
     public void setContent(String content){
         this.content = content;
+    }
+
+    public void setStarred(boolean starred) {
+        this.starred = starred;
     }
 }

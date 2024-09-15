@@ -27,7 +27,7 @@ public class MailAdapter extends RecyclerView.Adapter<mailVH> {
     @Override
     public mailVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(this.context);
-        View email = inflater.inflate(R.layout.item_inbox, parent, false);
+        View email = inflater.inflate(R.layout.item_love, parent, false);
         mailVH mailVh = new mailVH(email);
         return mailVh;
     }
@@ -41,6 +41,9 @@ public class MailAdapter extends RecyclerView.Adapter<mailVH> {
         holder.setSubject(emailItem.getSubject());
         holder.setTimeSent(emailItem.getTimeSent());
         holder.setContent(emailItem.getContent());
+        if (emailItem.isStarred()){
+            holder.setStar(true);
+        }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +64,6 @@ public class MailAdapter extends RecyclerView.Adapter<mailVH> {
     @Override
     public int getItemCount() {
         return this.emails.size();
-
     }
 
     public interface OnItemClickListener {
