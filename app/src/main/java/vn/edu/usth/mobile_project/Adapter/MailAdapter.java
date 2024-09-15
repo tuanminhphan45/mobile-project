@@ -1,6 +1,7 @@
 package vn.edu.usth.mobile_project.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import vn.edu.usth.mobile_project.Activity.MainActivity;
+import vn.edu.usth.mobile_project.Activity.ReadMailActivity;
 import vn.edu.usth.mobile_project.Model.EmailItem;
 import vn.edu.usth.mobile_project.R;
 
@@ -49,6 +52,8 @@ public class MailAdapter extends RecyclerView.Adapter<mailVH> {
             @Override
             public void onClick(View v) {
                 Log.i("item", "open mail");
+                Intent intent = new Intent(context, ReadMailActivity.class);
+                context.startActivity(intent);
             }
         });
 

@@ -1,5 +1,6 @@
 package vn.edu.usth.mobile_project.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
+import vn.edu.usth.mobile_project.Activity.MainActivity;
 import vn.edu.usth.mobile_project.R;
 
 /**
@@ -61,6 +64,16 @@ public class MailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mail, container, false);
+        View view = inflater.inflate(R.layout.fragment_mail, container, false);
+        ImageButton backBtn = view.findViewById(R.id.backButton);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        return view;
     }
 }

@@ -94,7 +94,7 @@ public class InboxFragment extends Fragment {
         createEmailList();
         Log.d("myTag", emails.toString());
         recyclerView = view.findViewById(R.id.recyclerMails);
-        mailAdapter = new MailAdapter(getContext(), emails);
+        mailAdapter = new MailAdapter(getActivity(), emails);
         recyclerView.setAdapter(mailAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
