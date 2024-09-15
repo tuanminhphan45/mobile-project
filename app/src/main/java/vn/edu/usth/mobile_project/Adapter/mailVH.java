@@ -1,7 +1,10 @@
 package vn.edu.usth.mobile_project.Adapter;
 
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -9,13 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import vn.edu.usth.mobile_project.R;
 
-public class VH extends RecyclerView.ViewHolder {
+public class mailVH extends RecyclerView.ViewHolder {
     private ImageView profileImg;
     private TextView username;
     private TextView subject;
     private TextView timeSent;
     private TextView content;
-    public VH(@NonNull View itemView) {
+    private RelativeLayout overlay;
+    public mailVH(@NonNull View itemView) {
         super(itemView);
 
         this.profileImg = itemView.findViewById(R.id.profile_image);
@@ -23,6 +27,31 @@ public class VH extends RecyclerView.ViewHolder {
         this.subject = itemView.findViewById(R.id.subject);
         this.timeSent = itemView.findViewById(R.id.time_sent);
         this.content = itemView.findViewById(R.id.content);
+        this.overlay = itemView.findViewById(R.id.profileOverlay);
+    }
+
+    public ImageView getProfileImg() {
+        return profileImg;
+    }
+
+    public TextView getSubject() {
+        return subject;
+    }
+
+    public TextView getTimeSent() {
+        return timeSent;
+    }
+
+    public TextView getUsername() {
+        return username;
+    }
+
+    public RelativeLayout getOverlay() {
+        return overlay;
+    }
+
+    public TextView getContent() {
+        return content;
     }
 
     public void setProfileImg(int imgId) {
@@ -43,5 +72,15 @@ public class VH extends RecyclerView.ViewHolder {
 
     public void setContent(String content) {
         this.content.setText(content);
+    }
+
+    public void toggleOverlay(){
+        Log.i("ViewHolder", "Toggle Visibility: " + this.overlay.getVisibility());
+        if(this.overlay.getVisibility() == ViewGroup.GONE){
+            this.overlay.setVisibility(ViewGroup.VISIBLE);
+        }
+        else if(this.overlay.getVisibility() == ViewGroup.VISIBLE){
+            this.overlay.setVisibility(ViewGroup.GONE);
+        }
     }
 }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -89,6 +90,7 @@ public class InboxFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_inbox, container, false);
         // LinearLayout emailList = view.findViewById(R.id.emailItemList);
 
+        // create the list of email items
         emails = new ArrayList<>();
         createEmailList();
         Log.d("myTag", emails.toString());
@@ -96,6 +98,8 @@ public class InboxFragment extends Fragment {
         mailAdapter = new MailAdapter(getContext(), emails);
         recyclerView.setAdapter(mailAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
 
         FloatingActionButton floatingActionButton = view.findViewById(R.id.write_email);
         mainActivity= (MainActivity)getActivity();
@@ -116,12 +120,14 @@ public class InboxFragment extends Fragment {
         }
     }
 
-    private void openMail(View v){
-        MailFragment mail = new MailFragment();
-        FragmentActivity activity = getActivity();
+    private void openMail(){
+        // Replace the whole screen with the new fragment
+        Fragment emailDetailFragment = new MailFragment();
 
-        activity.getSupportFragmentManager().beginTransaction().replace(R.id.mainContainer, mail).addToBackStack(null).commit();
-
-
+        // Perform the fragment transaction
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.mainContainer, emailDetailFragment);
+        transaction.addToBackStack(null); // Add to back stack to allow "back" navigation
+        transaction.commit();
     }
 }
