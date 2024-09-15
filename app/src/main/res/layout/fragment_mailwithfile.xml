@@ -21,15 +21,15 @@
         <!-- Profile Picture -->
         <ImageView
             android:id="@+id/profilePicture"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/profilepic" />
 
         <!-- User Name -->
         <TextView
             android:id="@+id/userName"
-            android:layout_width="137dp"
-            android:layout_height="19dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_toEndOf="@id/profilePicture"
             android:layout_marginStart="8dp"
             android:text="@string/Luke"
@@ -40,27 +40,27 @@
         <!-- Time Ago -->
         <TextView
             android:id="@+id/timeAgo"
-            android:layout_width="40dp"
-            android:layout_height="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_toEndOf="@id/profilePicture"
             android:layout_below="@id/userName"
             android:layout_marginStart="8dp"
             android:text="1h ago"
             android:textColor="@android:color/darker_gray"
-            android:textSize="13sp" />
+            android:textSize="14sp" />
 
         <!-- User Email -->
 
         <!-- Trash Icon -->
         <TextView
             android:id="@+id/userEmail"
-            android:layout_width="103dp"
-            android:layout_height="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="13dp"
             android:text="@string/lukemail"
             android:textColor="#A9A9A9"
-            android:textSize="13sp" />
+            android:textSize="14sp" />
 
 
 
@@ -69,107 +69,122 @@
     </RelativeLayout>
 
     <!-- Mail Content Title -->
+    <TextView
+        android:id="@+id/mailContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileSection"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/my_favorite_song"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <!-- Mail Body -->
 
     <!-- Action Buttons -->
 
     <TextView
-        android:id="@+id/mailContent"
-        android:layout_width="304dp"
-        android:layout_height="31dp"
-        android:layout_below="@id/profileSection"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/my_favorite_song"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <TextView
         android:id="@+id/mailBody"
-        android:layout_width="342dp"
-        android:layout_height="382dp"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
         android:layout_above="@+id/actionButtons"
         android:layout_below="@id/mailContent"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="-1dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="95dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/fav_song"
         android:textColor="#000000"
-        android:textSize="19sp" />
+        android:textSize="20sp" />
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/actionButtons"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
         android:background="#ffffff"
+        android:orientation="horizontal"
         android:weightSum="2">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="-77dp"
+            android:src="@drawable/song">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="274dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="50dp"
+
+            android:layout_marginBottom="50dp"
+            android:layout_toEndOf="@id/imageView"
+            android:text="@string/my_favorite_song"
+            android:textSize="18sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/Mb"
+            android:layout_width="266dp"
+            android:layout_height="43dp"
+            android:layout_centerInParent="true"
+            android:layout_marginVertical="@id/imageView"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="@id/imageView"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:text="3Mb"
+            android:textColor="#AAAAAA"
+            android:textSize="15sp">
+
+        </TextView>
 
         <Button
             android:id="@+id/forwardButton"
-            android:layout_width="0dp"
+            android:layout_width="177dp"
             android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/imageView"
+            android:layout_marginBottom="-50dp"
             android:layout_weight="1"
-            android:backgroundTint="#FFDDDD"
+            android:backgroundTint="#FF4444"
             android:text="Forward"
-            android:textColor="#611717" />
+            android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/replyButton"
-            android:layout_width="0dp"
+            android:layout_width="177dp"
             android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/forwardButton"
+            android:layout_alignBottom="@id/Mb"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="-186dp"
+            android:layout_marginRight="-24dp"
+            android:layout_marginBottom="-39dp"
             android:layout_weight="1"
-            android:backgroundTint="#E13535"
+            android:backgroundTint="#CC0000"
             android:text="Reply"
             android:textColor="#ffffff" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_above="@id/actionButtons"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="18dp"
-        android:src="@drawable/song">
-
-    </ImageView>
 
 
-    <TextView
-        android:layout_width="135dp"
-        android:layout_height="22dp"
-        android:layout_above="@id/actionButtons"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginBottom="50dp"
-        android:layout_toEndOf="@+id/imageView"
-        android:text="@string/my_favorite_song"
-        android:textSize="18sp">
+    </RelativeLayout>
 
-    </TextView>
-    <TextView
-        android:layout_width="31dp"
-        android:layout_height="17dp"
-        android:layout_above="@id/actionButtons"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginBottom="20dp"
-        android:layout_toEndOf="@+id/imageView"
-        android:text="3Mb"
-        android:textSize="15sp"
-        android:textColor="#AAAAAA">
 
-    </TextView>
+
 
 </RelativeLayout>
