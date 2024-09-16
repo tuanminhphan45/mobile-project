@@ -13,5 +13,6 @@
     <color name="red_text">#FF611717</color>
     <color name="switch_settings_label">#99000000</color>
     <color name="green">#FF2CD747</color>
-
+    <color name="btnDefault">#611717</color>
+    <color name="btnActive">#E13535</color>
 </resources>

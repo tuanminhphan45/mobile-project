@@ -18,11 +18,16 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         switch (position){
-            case 0: return new FloderFragment();
-            case 1: return  new InboxFragment();
-            case 2: return  new StatterdFragment();
-            default: return new InboxFragment();
+            case 0:
+                return new FloderFragment();
+            case 1:
+                return  new InboxFragment();
+            case 2:
+                return  new StatterdFragment();
+            default:
+                return new InboxFragment();
         }
+
     }
 
     @Override

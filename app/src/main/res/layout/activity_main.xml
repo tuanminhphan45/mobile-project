@@ -70,39 +70,23 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp">
+        app:tabIndicatorFullWidth="true"
+        android:background="@android:color/transparent"
+        app:tabIndicatorColor="@color/red"
+        app:tabIndicatorHeight="4dp"
+        app:tabPaddingTop="17dp"
+        app:tabPaddingBottom="8dp"
+        app:tabMode="fixed"
+        >
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:icon="@drawable/folder_icon"
-            />
-
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/inbox_icon" />
-
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/star_icon" />
 
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="387dp"
+        android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
 
 </LinearLayout>
