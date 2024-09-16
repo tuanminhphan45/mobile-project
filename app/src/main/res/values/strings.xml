@@ -21,8 +21,8 @@
     <string name="compose">Compose</string>
     <string name="new_chat">New chat</string>
     <string name="please_register_with_your_information">Please register with your information</string>
-    <string name="to">To</string>
-    <string name="subject">Subject</string>
+    <string name="to">To:</string>
+    <string name="subject">Subject:</string>
     <string name="message">Message</string>
     <string name="to_me">to me</string>
     <string name="reply">Reply</string>
@@ -41,7 +41,7 @@
     <string name="settings">SETTINGS</string>
     <string name="settings_1">Settings</string>
     <string name="log_out">Log out</string>
-    <string name="from">From</string>
+    <string name="from">From:</string>
     <string name="me">me</string>
     <string name="sign_in_to_your_account">Sign in to your account</string>
     <string name="email_address">Email Address</string>
@@ -80,4 +80,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     <string name="trashbtn">Trashbtn</string>
     <string name="search">Search</string>
     <string name="searching">Searching</string>
+
 </resources>

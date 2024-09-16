@@ -11,6 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import vn.edu.usth.mobile_project.Fragment.InboxFragment;
 import vn.edu.usth.mobile_project.R;
 
 public class WriteActivity extends AppCompatActivity {
@@ -30,7 +31,7 @@ public class WriteActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(WriteActivity.this,MainActivity.class);
+                Intent intent = new Intent(WriteActivity.this, InboxFragment.class);
                 startActivity(intent);
             }
         });
