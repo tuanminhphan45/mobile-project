@@ -99,4 +99,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     <string name="label_search_history">Search history</string>
 
     <string name="label_clear_his">Clear search history</string>
+    <string name="write">Write</string>
 </resources>

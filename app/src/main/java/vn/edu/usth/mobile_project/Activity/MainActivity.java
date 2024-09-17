@@ -7,8 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.TableLayout;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
@@ -20,6 +22,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 
@@ -35,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     ViewPagerAdapter viewPagerAdapter;
-    FrameLayout frameLayout;
 
 
     @Override
@@ -49,49 +51,30 @@ public class MainActivity extends AppCompatActivity {
 
         viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager2.setAdapter(viewPagerAdapter);
-        frameLayout = findViewById(R.id.frameLayout);
-
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(
+                tabLayout, viewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager2.setVisibility(View.VISIBLE);
-                frameLayout.setVisibility(View.GONE);
-                viewPager2.setCurrentItem(tab.getPosition());
-
-                if (tab.getIcon() != null) {
-                    tab.getIcon().setTint(getResources().getColor(R.color.red));
-                }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-                if (tab.getIcon() != null) {
-                    tab.getIcon().setTint(getResources().getColor(R.color.btn_bg)); // Set your default color here
-                }
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-                viewPager2.setVisibility(View.VISIBLE);
-                frameLayout.setVisibility(View.GONE);
-            }
-        });
-        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
+            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
                 switch (position){
-                    case 0:
-                        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.red));
+                    case 0: {
+                        tab.setIcon(R.drawable.folder_icon);
                         break;
-                    case 1:
-                        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.red));
+                    }
+                    case 1: {
+                        tab.setIcon(R.drawable.inbox_icon);
                         break;
-                    case 2:
-                        tabLayout.getTabAt(position).select();
+                    }
+                    case 2: {
+                        tab.setIcon(R.drawable.star_icon);
+                        break;
+                    }
                 }
-                super.onPageSelected(position);
             }
-        });
+
+        }
+        );
+        tabLayoutMediator.attach();
+        tabLayout.setTabIconTintResource(R.color.tab_icon_color);
 
 
 
