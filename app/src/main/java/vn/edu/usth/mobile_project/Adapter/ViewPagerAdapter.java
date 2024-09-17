@@ -21,7 +21,7 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
             case 0: return new FloderFragment();
             case 1: return  new InboxFragment();
             case 2: return  new StatterdFragment();
-            default: return new InboxFragment();
+            default: return new FloderFragment();
         }
     }
 

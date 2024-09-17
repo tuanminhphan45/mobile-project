@@ -1,5 +1,6 @@
 package vn.edu.usth.mobile_project.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import vn.edu.usth.mobile_project.Activity.MainActivity;
+import vn.edu.usth.mobile_project.Activity.WriteActivity;
 import vn.edu.usth.mobile_project.R;
 
 /**
@@ -61,6 +66,16 @@ public class StatterdFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_statterd, container, false);
+        View view   = inflater.inflate(R.layout.fragment_inbox, container, false);
+        FloatingActionButton floatingActionButton = view.findViewById(R.id.write_email);
+        MainActivity mainActivity = (MainActivity) getActivity();
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), WriteActivity.class);
+                startActivity(intent);
+            }
+        });
+        return view;
     }
 }
