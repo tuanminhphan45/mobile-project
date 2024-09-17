@@ -1,290 +1,175 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".Activity.WriteActivity">
 
-
-    <RelativeLayout
-        android:id="@+id/to"
-        android:layout_width="match_parent"
-        android:layout_height="54dp"
-
-
-        android:layout_marginTop="129dp"
-        android:clipToOutline="true">
-
-        <View
-            android:id="@+id/separation_"
-            android:layout_width="366dp"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="53dp"
-            android:background="#1A000000" />
-
-        <EditText
-            android:id="@+id/input_to"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="17dp"
-            android:background="@android:color/transparent"
-            android:gravity="top"
-            android:text="To:"
-            android:textSize="14sp" />
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/To"-->
-        <!--            android:layout_width="20dp"-->
-        <!--            android:layout_height="17dp"-->
-        <!--            android:layout_alignParentLeft="true"-->
-        <!--            android:layout_alignParentTop="true"-->
-        <!--            android:layout_marginLeft="24dp"-->
-        <!--            android:layout_marginTop="19dp"-->
-        <!--            android:gravity="top"-->
-        <!--            android:text="To:"/>-->
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/from"
-        android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:layout_marginTop="183dp"
-        android:clipToOutline="true">
-
-        <View
-            android:id="@+id/separation2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:background="#1A000000" />
-
-        <TextView
-            android:id="@+id/fromLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="24dp"
-            android:layout_centerVertical="true"
-            android:text="From:"
-            android:textSize="14sp" />
-
-        <Spinner
-            android:id="@+id/spinnerFrom"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="40dp"
-            android:layout_toEndOf="@id/fromLabel"
-            android:layout_centerVertical="true"
-            android:spinnerMode="dropdown"
-            android:background="@android:drawable/btn_dropdown" />
-
-        <ImageButton
-            android:id="@+id/down_arrow"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="24dp"
-            android:src="@drawable/down_arrow"
-            android:background="@color/white"/>
-
-    </RelativeLayout>
-
-    <!--Subject-->
-    <RelativeLayout
-        android:id="@+id/subject"
-        android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="261dp"
-        android:clipToOutline="true" >
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/Subject"-->
-        <!--            android:layout_width="55dp"-->
-        <!--            android:layout_height="17dp"-->
-        <!--            android:layout_alignParentLeft="true"-->
-        <!--            android:layout_marginLeft="24dp"-->
-        <!--            android:layout_alignParentTop="true"-->
-        <!--            android:layout_marginTop="19dp"-->
-        <!--            android:text="Subject:"-->
-        <!--            android:textSize="14sp"-->
-        <!--            android:gravity="top"-->
-        <!--            />-->
-        <EditText
-            android:id="@+id/inputt_subject"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="17dp"
-            android:background="@android:color/transparent"
-            android:gravity="top"
-            android:text="Subject:"
-            android:textSize="14sp" />
-
-        <View
-            android:id="@+id/separation3"
-            android:layout_width="366dp"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="12dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="53dp"
-            android:background="#1A000000"
-            />
-    </RelativeLayout>
-    <!--Compose Email-->
-    <RelativeLayout
-
-        android:id="@+id/compose_ema"
-        android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="315dp"
-        android:clipToOutline="true"
-        >
-
-        <TextView
-            android:id="@+id/Compose_ema"
-            android:layout_width="102dp"
-            android:layout_height="17dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="24dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="19dp"
-            android:text="Compose email"
-            android:textSize="14sp"
-            android:textColor="#808080"
-            android:gravity="top"
-            />
-    </RelativeLayout>
-
-    <!--Footer-->
-    <RelativeLayout
-        android:id="@+id/background"
-        android:layout_width="match_parent"
-        android:layout_height="119dp"
-        android:layout_marginTop="620dp"
-        android:background="@color/white"
-        android:elevation="32dp"
-
-        >
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:orientation="horizontal">
-
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="42dp"
-                android:layout_alignParentStart="true"
-                >
-
-                <Button
-                    android:id="@+id/forwardBtn"
-                    android:layout_width="159dp"
-                    android:layout_height="43dp"
-                    android:layout_weight="1"
-                    android:text="@string/forwardText"
-                    android:drawableLeft="@drawable/forward_icon"
-                    android:gravity="center"
-                    android:backgroundTint="@color/button_background"
-                    android:textColor="#611717"/>
-
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="42dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerInParent="true">
-                <Button
-                    android:id="@+id/replyBtn"
-                    android:layout_width="159dp"
-                    android:layout_height="43dp"
-                    android:gravity="center"
-                    android:drawableLeft="@drawable/reply_icon"
-                    android:layout_weight="1"
-                    android:text="@string/replyText"
-                    android:layout_marginStart="8dp"
-                    android:backgroundTint="#D9534F"
-                    android:textColor="#FFFFFF"
-                    />
-
-
-            </RelativeLayout>
-
-
-        </RelativeLayout>
-
-
-
-    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:background="@color/white"
-        android:elevation="32dp"
-        >
+        android:elevation="2dp"
+        android:id="@+id/top_write">
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="62dp"
-            android:layout_height="29dp"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="165dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="49dp"
-            android:text="Write"
-            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/write"
             android:textColor="#611717"
-            android:gravity="center_horizontal|top"
-            />
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <ImageButton
+            android:id="@+id/back_write"
             android:layout_width="29dp"
             android:layout_height="29dp"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="31dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="49dp"
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
             android:src="@drawable/ic_back_arrow"
-            android:backgroundTint="@color/white"
-            android:id="@+id/back_write"
             />
 
-
     </RelativeLayout>
-</RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingVertical="24dp"
+        android:background="#FDEDED"
+        android:paddingHorizontal="12dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxStrokeColor="#CCC"
+            app:hintEnabled="true"
+            app:hintTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:hint="@string/to"
+                android:background="@android:color/transparent"
+                android:paddingStart="12dp"
+                android:textColorHint="#8B8B8B" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeColor="#611717"
+            app:hintEnabled="true"
+            app:hintTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:hint="@string/from"
+                android:background="@android:color/transparent"
+                android:paddingStart="12dp"
+                android:textColorHint="#8B8B8B" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxStrokeColor="#CCC"
+            app:hintEnabled="true"
+            app:hintTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:hint="@string/subject"
+                android:background="@android:color/transparent"
+                android:paddingStart="12dp"
+                android:textColorHint="#8B8B8B" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxStrokeColor="#CCC"
+            app:hintEnabled="false"
+            app:hintTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="Compose email"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:paddingStart="12dp"
+                android:textColorHint="#8B8B8B" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:layout_gravity="bottom">
+
+
+        <Button
+            android:id="@+id/addFiles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FAD4D4"
+            android:text="Add files"
+            android:textColor="#611717"
+            android:drawableLeft="@drawable/paper_clip"
+            android:drawablePadding="8dp"
+            android:paddingVertical="12dp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#D9534F"
+            android:text="Send"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/send"
+            android:drawablePadding="14dp"
+            android:paddingVertical="12dp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
