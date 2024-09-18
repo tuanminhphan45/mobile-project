@@ -61,7 +61,7 @@ public class MailAdapter extends RecyclerView.Adapter<mailVH> {
             @Override
             public boolean onLongClick(View v) {
                 holder.toggleOverlay();
-                return false;
+                return true;
             }
         });
     }
