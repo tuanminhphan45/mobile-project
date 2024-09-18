@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import vn.edu.usth.mobile_project.R;
 
-public class mailVH extends RecyclerView.ViewHolder {
+public class MailVH extends RecyclerView.ViewHolder {
     private ImageView profileImg;
     private TextView username;
     private TextView subject;
@@ -21,7 +21,7 @@ public class mailVH extends RecyclerView.ViewHolder {
     private RelativeLayout overlay;
     private ImageView star;
 
-    public mailVH(@NonNull View itemView) {
+    public MailVH(@NonNull View itemView) {
         super(itemView);
 
         this.profileImg = itemView.findViewById(R.id.profile_image);
