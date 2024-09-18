@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import vn.edu.usth.mobile_project.Fragment.FloderFragment;
+import vn.edu.usth.mobile_project.Fragment.FolderFragment;
 import vn.edu.usth.mobile_project.Fragment.InboxFragment;
 import vn.edu.usth.mobile_project.Fragment.StatterdFragment;
 
@@ -19,7 +19,7 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                return new FloderFragment();
+                return new FolderFragment();
             case 1:
                 return  new InboxFragment();
             case 2:

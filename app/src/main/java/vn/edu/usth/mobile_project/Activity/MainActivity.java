@@ -2,36 +2,18 @@ package vn.edu.usth.mobile_project.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.TableLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-import java.util.ArrayList;
-
-import vn.edu.usth.mobile_project.Adapter.MailAdapter;
 import vn.edu.usth.mobile_project.Adapter.ViewPagerAdapter;
-import vn.edu.usth.mobile_project.Fragment.FloderFragment;
-import vn.edu.usth.mobile_project.Fragment.InboxFragment;
-import vn.edu.usth.mobile_project.Fragment.StatterdFragment;
-import vn.edu.usth.mobile_project.Model.EmailItem;
 import vn.edu.usth.mobile_project.R;
 
 public class MainActivity extends AppCompatActivity {
