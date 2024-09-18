@@ -9,17 +9,21 @@
 
     <LinearLayout
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         android:padding="28dp"
-        >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="55dp"
-            android:text="@string/welcome_back"
             android:layout_marginTop="84dp"
+            android:text="@string/welcome_back"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textSize="32sp"
             android:textStyle="bold" />
@@ -41,9 +45,9 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:theme="@style/MyTextInputLayout_overlay">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -62,9 +66,9 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -114,7 +118,5 @@
             app:cornerRadius="50dp" />
 
 
-
-    </LinearLayout
-        >
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
