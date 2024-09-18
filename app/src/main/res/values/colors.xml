@@ -14,4 +14,5 @@
     <color name="green">#FF2CD747</color>
     <color name="btnDefault">#611717</color>
     <color name="btnActive">#E13535</color>
+    <color name="btn_login">#436A89</color>
 </resources>
