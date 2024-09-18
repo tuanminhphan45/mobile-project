@@ -7,7 +7,7 @@
 
     <style name="MyTextInputLayout_overlay">
         <item name="colorOnSurface">@color/black</item>
-        <item name="colorPrimary">@color/btn_login</item>
+        <item name="colorPrimary">@color/red</item>
     </style>
 
 
