@@ -1,139 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/readMail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#FFEAEB">
+    android:orientation="vertical"
+    android:background="@color/light_gray"
+    tools:context=".Activity.ReadMailActivity">
 
-    <!-- Back Button -->
-
-
-    <!-- User Profile Section (using RelativeLayout) -->
-    <RelativeLayout
-        android:id="@+id/profileSection"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_height="@dimen/ViewHeight"
+        android:background="@color/black"/>
 
-        android:background="#f5f5f5"
-        android:elevation="4dp"
-        android:padding="16dp"
-        android:layout_marginBottom="8dp">
-
-        <!-- Profile Picture -->
-        <ImageView
-            android:id="@+id/profilePicture"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/profilepic" />
-
-        <!-- User Name -->
-        <TextView
-            android:id="@+id/userName"
-            android:layout_width="137dp"
-            android:layout_height="19dp"
-            android:layout_toEndOf="@id/profilePicture"
-            android:layout_marginStart="8dp"
-            android:text="@string/Luke"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <!-- Time Ago -->
-        <TextView
-            android:id="@+id/timeAgo"
-            android:layout_width="67dp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:minHeight="@dimen/minHeight"
             android:layout_height="wrap_content"
-            android:layout_below="@id/userName"
-            android:layout_marginStart="8dp"
-            android:layout_toEndOf="@id/profilePicture"
-            android:text="1h ago"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="13sp" />
+            android:orientation="vertical"
+            android:padding="@dimen/padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/backButton">
 
-        <!-- User Email -->
+            <LinearLayout
+                android:id="@+id/userProfileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/marginStart"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-        <!-- Trash Icon -->
-        <TextView
-            android:id="@+id/userEmail"
-            android:layout_width="103dp"
-            android:layout_height="14dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="13dp"
-            android:text="@string/lukemail"
-            android:textColor="#A9A9A9"
-            android:textSize="13sp" />
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="@dimen/imgWidth"
+                    android:layout_height="@dimen/imgHeight"
+                    android:contentDescription="@string/profileimage"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/profile_picture"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/marginStart">
 
 
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/nameSize"
+                        android:textStyle="bold" />
 
-        <!-- Menu Icon -->
 
-    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/userEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/userName"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/kris13_gmail_com"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/textSize" />
 
-    <!-- Mail Content Title -->
-    <TextView
-        android:id="@+id/mailContent"
-        android:layout_width="304dp"
-        android:layout_height="31dp"
-        android:layout_below="@id/profileSection"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/selfintro"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/timeAgo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/userName"
+                        android:text="@string/_1h_ago"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/textSize" />
 
-    <!-- Mail Body -->
+                </RelativeLayout>
+            </LinearLayout>
 
-    <!-- Action Buttons -->
+            <TextView
+                android:id="@+id/email_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/marginStart"
+                android:text="@string/email_subject"
+                android:textAppearance="@style/email_subject"/>
 
-    <TextView
-        android:id="@+id/mailBody"
-        android:layout_width="358dp"
-        android:layout_height="360dp"
-        android:layout_above="@+id/actionButtons"
-        android:layout_below="@id/mailContent"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="-1dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/paragraph"
-        android:textColor="#000000"
-        android:textSize="22sp" />
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:lineSpacingExtra="@dimen/lineSpace"
+                android:text="@string/email_content"
+                android:textAppearance="@style/email_content"
+                android:translationY="@dimen/YTrans" />
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
-        android:id="@+id/actionButtons"
-        android:layout_width="382dp"
-        android:layout_height="118dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:id="@+id/mailBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/buttonMinHeight"
+        android:background="@color/white"
         android:orientation="horizontal"
-        android:weightSum="2">
+        android:paddingVertical="@dimen/verPad"
+        android:paddingHorizontal="@dimen/horPad">
 
         <Button
-            android:id="@+id/forwardButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#FFDDDD"
-            android:text="Forward"
-            android:textColor="#611717" />
+
+            android:id="@+id/forwardBtn"
+            android:contentDescription="@string/btnforword"
+            style="@style/ReplyForward"
+            android:text="@string/forwardText"
+            android:drawableLeft="@drawable/forward_icon"
+            android:backgroundTint="@color/button_background"
+            android:textColor="@color/btn_bg"/>
 
         <Button
-            android:id="@+id/replyButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_weight="1"
-            android:backgroundTint="#E13535"
-            android:text="Reply"
-            android:textColor="#ffffff" />
+
+            android:id="@+id/replyBtn"
+            style="@style/ReplyForward"
+            android:drawableLeft="@drawable/reply_icon"
+            android:text="@string/replyText"
+            android:layout_marginStart="@dimen/buttonMarginStart"
+            android:backgroundTint="@color/light_red"
+            android:textColor="@color/white" />
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
