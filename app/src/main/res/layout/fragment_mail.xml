@@ -11,52 +11,36 @@
     tools:context=".Fragment.MailFragment">
 
 
-    <RelativeLayout
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/actionButtons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="60dp"
         android:layout_gravity="center_horizontal"
-        android:paddingVertical="15dp"
-        android:paddingHorizontal="20dp"
         android:background="@color/white"
-        >
+        android:minHeight="60dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="15dp">
 
         <ImageButton
             android:id="@+id/backButton"
+            style="@style/BackButtonStyle"
             android:contentDescription="@string/backbtn"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_back_arrow"
-            android:layout_gravity="center"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"/>
+            android:src="@drawable/ic_back_arrow" />
 
         <ImageButton
             android:id="@+id/trashButton"
-            android:contentDescription="@string/trashbtn"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_trash"
+            style="@style/TrashButton"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:layout_gravity="center"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="48dp"
-            android:layout_centerVertical="true"
-            />
+            android:contentDescription="@string/trashbtn"
+            android:src="@drawable/ic_trash" />
 
         <ImageButton
             android:id="@+id/menuButton"
-            android:contentDescription="@string/menubtm"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_options"
+           style="@style/TrashButton"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:layout_gravity="center|end"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true" />
-    </RelativeLayout>
+            android:contentDescription="@string/menubtm"
+            android:src="@drawable/ic_options" />
+    </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
             android:layout_width="match_parent"
@@ -166,12 +150,12 @@
             android:layout_width="159dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            style="?android:attr/buttonBarButtonStyle"
+
             android:text="@string/forwardText"
             android:drawableLeft="@drawable/forward_icon"
             android:gravity="center"
             android:backgroundTint="@color/button_background"
-            android:textColor="#611717"/>
+            android:textColor="@color/btn_bg"/>
 
         <Button
             android:layout_marginTop="15dp"
@@ -179,12 +163,12 @@
             android:layout_width="159dp"
             android:layout_height="50dp"
             android:gravity="center"
-            style="?android:attr/buttonBarButtonStyle"
+
             android:drawableLeft="@drawable/reply_icon"
             android:layout_weight="1"
             android:text="@string/replyText"
             android:layout_marginStart="8dp"
-            android:backgroundTint="#D9534F"
-            android:textColor="#FFFFFF" />
+            android:backgroundTint="@color/light_red"
+            android:textColor="@color/white" />
     </LinearLayout>
 </LinearLayout>

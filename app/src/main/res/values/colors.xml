@@ -4,6 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#EAEDEA</color>
     <color name="red">#FFE13535</color>
+    <color name="light_red">#FFD9534F</color>
     <color name="red_overlay">#80E13535</color>
     <color name="button_background">#FFDDDD</color>
     <color name="btn_bg">#611717</color>
