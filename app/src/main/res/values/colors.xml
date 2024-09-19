@@ -3,6 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#EAEDEA</color>
+    <color name="dark_gray">#FF808080</color>
+    <color name="light_gray">#FFF4F4F4</color>
     <color name="red">#FFE13535</color>
     <color name="light_red">#FFD9534F</color>
     <color name="red_overlay">#80E13535</color>
